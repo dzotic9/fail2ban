@@ -2,12 +2,13 @@ version: 0.9.6
 jpsType: update
 jpsVersion: 0.8
 name: Fail2Ban
+baseUrl: https://github.com/jelastic-jps/fail2ban/
 categories:
 - apps/others
 - apps/management-and-monitoring
 description: Fail2Ban scans log files like and bans IP addresses that make too many password failures. It updates firewall rules to reject the IP address. These rules can be defined by the user. Fail2Ban can read multiple log files such as sshd or Apache Web server ones.
 homepage: http://www.fail2ban.org/
-logo: https://github.com/jelastic-jps/fail2ban/raw/master/images/Fail2Ban.png
+logo: ${baseUrl}/raw/master/images/Fail2Ban.png
 targetNodes:
   nodeType:
   - tomcat6
@@ -48,9 +49,9 @@ targetNodes:
   - payara
   - wildfly
 globals:
-  installScript: https://github.com/jelastic-jps/fail2ban/raw/master/scripts/install.sh
-  setupScript: https://github.com/jelastic-jps/fail2ban/raw/master/scripts/setup.sh
-  removeScript: https://github.com/jelastic-jps/fail2ban/raw/master/scripts/remove.sh
+  installScript: ${baseUrl}/raw/master/scripts/install.sh
+  setupScript: ${baseUrl}/raw/master/scripts/setup.sh
+  removeScript: ${baseUrl}/raw/master/scripts/remove.sh
   documentationLink: http://www.fail2ban.org/wiki/index.php/Manual
 menu:
 - caption: Remove the IP from the Ban list
